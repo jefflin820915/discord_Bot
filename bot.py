@@ -1,34 +1,33 @@
 import discord
-from discord.ext import commands
 import json
+import os
+import asyncio
+from discord.ext import commands
 
-with open("setting.json","r", encoding="utf8") as jfile:
 
+with open("./common/setting.json", "r", encoding="utf8") as jfile:
     jdata = json.load(jfile)
 
+COGS = os.listdir("./cogs")
 
-bot = commands.Bot(command_prefix='@')
-
+intents = discord.Intents.all()
+intents.message_content = True
+bot = commands.Bot(command_prefix='$', intents=discord.Intents.all())
 
 
 @bot.event
 async def on_ready():
-    print("Bot is online")
+    print("Bot in ready")
 
-@bot.event
-async def on_meber_join(meber):
-    channel = bot.get_channel(int(jdata['channel_one_id']))
-    await channel.send(f'{meber} join!')
-    
+async def load():
+    for file in COGS:
+        if file.endswith(".py"):
+            await bot.load_extension(f"cogs.{file[:-3]}")
 
+async def main():
+    async with bot:
+        await load()
+        await bot.start(jdata['TOKEN'])
+        print('login')
 
-@bot.event
-async def on_meber_remove(meber):
-    channel = bot.get_channel(int(jdata['channel_one_id']))
-    await channel.send(f'{meber} leave!')
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send(f'{round(bot.latency * 1000)} (ms)')
-
-bot.run(jdata['TOKEN'])
+asyncio.run(main())
