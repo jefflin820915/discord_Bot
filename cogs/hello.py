@@ -16,10 +16,5 @@ class Hello(Cog_Extension):
         print('hello')
         await ctx.send(f"!Hi <@{ctx.author.id}>")
 
-    @commands.command()
-    async def CHHH2(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3))
-
-
 async def setup(bot):
     await bot.add_cog(Hello(bot))
