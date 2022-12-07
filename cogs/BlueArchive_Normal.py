@@ -137,135 +137,135 @@ class BlueArchive_Normal(Cog_Extension):
 # --------------------------           -------------------------------------------------------#
     @commands.command()
     async def BA_N6_1(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, 6))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, 6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, BA_CH6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, BA_CH6))
 
     @commands.command()
     async def BA_N6_2(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, 6))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, 6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, BA_CH6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, BA_CH6))
 
     @commands.command()
     async def BA_N6_3(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, 6))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, 6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, BA_CH6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, BA_CH6))
 
     @commands.command()
     async def BA_N6_4(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, 6))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, 6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, BA_CH6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, BA_CH6))
 
     @commands.command()
     async def BA_N6_5(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, 6))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, 6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, BA_CH6))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, BA_CH6))
 
 # --------------------------           -------------------------------------------------------#
     @commands.command()
     async def BA_N7_1(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, 7))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, 7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, BA_CH7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, BA_CH7))
 
     @commands.command()
     async def BA_N7_2(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, 7))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, 7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, BA_CH7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, BA_CH7))
 
     @commands.command()
     async def BA_N7_3(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, 7))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, 7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, BA_CH7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, BA_CH7))
 
     @commands.command()
     async def BA_N7_4(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, 7))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, 7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, BA_CH7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, BA_CH7))
 
     @commands.command()
     async def BA_N7_5(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, 7))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, 7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, BA_CH7))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, BA_CH7))
 
 
 # --------------------------           -------------------------------------------------------#
     @commands.command()
     async def BA_N8_1(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, 8))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, 8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, BA_CH8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, BA_CH8))
 
     @commands.command()
     async def BA_N8_2(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, 8))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, 8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, BA_CH8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, BA_CH8))
 
     @commands.command()
     async def BA_N8_3(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, 8))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, 8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, BA_CH8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, BA_CH8))
 
     @commands.command()
     async def BA_N8_4(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, 8))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, 8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, BA_CH8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, BA_CH8))
 
     @commands.command()
     async def BA_N8_5(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, 8))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, 8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, BA_CH8))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, BA_CH8))
 
 
 # --------------------------           -------------------------------------------------------#
     @commands.command()
     async def BA_N9_1(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, 9))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, 9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, BA_CH9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, BA_CH9))
 
     @commands.command()
     async def BA_N9_2(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, 9))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, 9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, BA_CH9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, BA_CH9))
 
     @commands.command()
     async def BA_N9_3(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, 9))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, 9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, BA_CH9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, BA_CH9))
 
     @commands.command()
     async def BA_N9_4(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, 9))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, 9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, BA_CH9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, BA_CH9))
 
     @commands.command()
     async def BA_N9_5(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, 9))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, 9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, BA_CH9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, BA_CH9))
 
 
 # --------------------------           -------------------------------------------------------#
     @commands.command()
     async def BA_N10_1(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, 10))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, 10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 1, 2, BA_CH10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 1, 2, BA_CH10))
 
     @commands.command()
     async def BA_N10_2(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, 10))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, 10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 2, 3, BA_CH10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 2, 3, BA_CH10))
 
     @commands.command()
     async def BA_N10_3(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, 10))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, 10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 3, 4, BA_CH10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 3, 4, BA_CH10))
 
     @commands.command()
     async def BA_N10_4(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, 10))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, 10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 4, 5, BA_CH10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 4, 5, BA_CH10))
 
     @commands.command()
     async def BA_N10_5(self, ctx):
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, 10))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, 10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, BA_CH10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, BA_CH10))
 
 
 # --------------------------           -------------------------------------------------------#

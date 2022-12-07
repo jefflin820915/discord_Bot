@@ -25,5 +25,5 @@ class reloadCogs(Cog_Extension):
 	await ctx.author.send(f'{extension} 已更新')
 
 
-def setup(bot):
-    bot.add_cog(reloadCogs(bot))
+async def setup(bot):
+    await bot.add_cog(reloadCogs(bot))
