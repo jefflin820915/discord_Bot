@@ -2,6 +2,7 @@ import discord
 import json
 import os
 import asyncio
+import keep_alive
 from discord.ext import commands
 
 
@@ -27,6 +28,7 @@ async def load():
 async def main():
     async with bot:
         await load()
+        keep_alive.keep_alive()
         await bot.start(jdata['TOKEN'])
         print('login')
 

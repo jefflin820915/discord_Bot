@@ -152,6 +152,222 @@ class BlueArchive_Hard(Cog_Extension):
 
 # --------------------------      --------------------------------------------------------------
 
+    @commands.command()
+    async def BA_H9_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH9))
+
+    @commands.command()
+    async def BA_H9_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH9))
+
+    @commands.command()
+    async def BA_H9_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH9))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH9))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H10_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH10))
+
+    @commands.command()
+    async def BA_H10_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH10))
+
+    @commands.command()
+    async def BA_H10_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH10))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH10))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H11_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH11))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH11))
+
+    @commands.command()
+    async def BA_H11_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH11))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH11))
+
+    @commands.command()
+    async def BA_H11_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH11))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH11))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H12_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH12))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH12))
+
+    @commands.command()
+    async def BA_H12_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH12))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH12))
+
+    @commands.command()
+    async def BA_H12_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH12))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH12))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H13_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH13))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH13))
+
+    @commands.command()
+    async def BA_H13_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH13))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH13))
+
+    @commands.command()
+    async def BA_H13_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH13))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH13))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H14_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH14))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH14))
+
+    @commands.command()
+    async def BA_H14_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH14))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH14))
+
+    @commands.command()
+    async def BA_H14_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH14))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH14))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H15_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH15))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH15))
+
+    @commands.command()
+    async def BA_H15_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH15))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH15))
+
+    @commands.command()
+    async def BA_H15_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH15))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH15))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H16_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH16))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH16))
+
+    @commands.command()
+    async def BA_H16_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH16))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH16))
+
+    @commands.command()
+    async def BA_H16_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH16))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH16))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H17_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH17))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH17))
+
+    @commands.command()
+    async def BA_H17_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH17))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH17))
+
+    @commands.command()
+    async def BA_H17_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH17))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH17))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H18_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH18))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH18))
+
+    @commands.command()
+    async def BA_H18_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH18))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH18))
+
+    @commands.command()
+    async def BA_H18_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH18))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH18))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H19_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH19))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH19))
+
+    @commands.command()
+    async def BA_H19_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH19))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH19))
+
+    @commands.command()
+    async def BA_H19_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH19))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH19))
+
+
+# --------------------------      --------------------------------------------------------------
+
+    @commands.command()
+    async def BA_H20_1(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 1, 2, BA_CH20))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 1, 2, BA_CH20))
+
+    @commands.command()
+    async def BA_H20_2(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 2, 3, BA_CH20))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 2, 3, BA_CH20))
+
+    @commands.command()
+    async def BA_H20_3(self, ctx):
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardPic(self, 3, 4, BA_CH20))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getHardTable(self, 3, 4, BA_CH20))
+
+
+# --------------------------      --------------------------------------------------------------
+
 
 
 async def setup(bot):

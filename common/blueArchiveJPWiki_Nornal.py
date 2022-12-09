@@ -67,11 +67,11 @@ class BlueArchiveNormal:
             soup = BeautifulSoup(response.text, "html.parser")
 
             if Ch == 10:
-                missionCh = url[43:46] + str(page)
+                missionCh = url[44:47] + str(page)
                 picTitles = soup.find_all("img", attrs={'title': 'H' + missionCh + '.jpg'})
                 for picTitle in picTitles:
                     chPicPath = picTitle['data-src']
-                    chPicUrl = 'https://bluearchive.wikiru.jp/' + chPicPath
+                    chPicUrl = 'https://bluearchive.wikiru. jp/' + chPicPath
                     return chPicUrl
             elif Ch < 10:
                 missionCh = url[43:45] + str(page)
@@ -81,8 +81,8 @@ class BlueArchiveNormal:
                     chPicUrl = 'https://bluearchive.wikiru.jp/' + chPicPath
                     return chPicUrl
             elif Ch > 10:
-                missionCh = url[43:46] + str(page)
-                picTitles = soup.find_all("img", attrs={'title': missionCh + '攻略' + '.jpg'})
+                missionCh = url[44:47] + str(page)
+                picTitles = soup.find_all("img", attrs={'title': 'H' + missionCh + '攻略' + '.jpg'})
                 for picTitle in picTitles:
                     chPicPath = picTitle['data-src']
                     chPicUrl = 'https://bluearchive.wikiru.jp/' + chPicPath
@@ -105,6 +105,7 @@ class BlueArchiveNormal:
             for tr in trs:
                 rows.append([td.text.replace('\n', '').replace('\xa0', '') for td in tr.find_all('td')])
             rows[:5]
+            print(rows[:5])
             df = pd.DataFrame(data=rows, columns=columns)
             df.head()
             return df
