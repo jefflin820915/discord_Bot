@@ -42,18 +42,22 @@ class BlueArchiveNormal:
 
             url = 'https://bluearchive.wikiru.jp/' + '?' + str(Ch) + '%E7%AB%A0/' + str(Ch) + '-' + str(page)
 
+            print(url)
             response = requests.get(url)
             soup = BeautifulSoup(response.text, "html.parser")
             table = soup.find('div', {'id': 'rgn_content1'})
             columns = [th.text.replace('\n', '') for th in table.find('thead').find_all('th')]
             trs = table.find_all('tr')[1:]
+            print(trs)
             rows = list()
-
+            print(rows)
             for tr in trs:
                 rows.append([td.text.replace('\n', '').replace('\xa0', '') for td in tr.find_all('td')])
             rows[:5]
+            print(rows)
             df = pd.DataFrame(data=rows, columns=columns)
             df.head()
+            print(df)
             return df
 
 
@@ -95,17 +99,19 @@ class BlueArchiveNormal:
 
             url = 'https://bluearchive.wikiru.jp/' + '?' + str(Ch) + '%E7%AB%A0/' + 'H' + str(Ch) + '-' + str(page)
 
+            print(url)
             response = requests.get(url)
             soup = BeautifulSoup(response.text, "html.parser")
-            table = soup.find('div', {'id': 'rgn_content2'})
+            if Ch < 17:
+                table = soup.find('div', {'id': 'rgn_content2'})
+            else:
+                table = soup.find('div', {'id': 'rgn_content1'})
             columns = [th.text.replace('\n', '') for th in table.find('thead').find_all('th')]
             trs = table.find_all('tr')[1:]
             rows = list()
-
             for tr in trs:
                 rows.append([td.text.replace('\n', '').replace('\xa0', '') for td in tr.find_all('td')])
             rows[:5]
-            print(rows[:5])
             df = pd.DataFrame(data=rows, columns=columns)
-            df.head()
+
             return df

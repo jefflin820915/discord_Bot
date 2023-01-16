@@ -39,9 +39,9 @@ import pandas as pd
 #     print(title.getText())
 
 
-for page in range(1, 2):
+for page in range(2, 3):
 
-    url = 'https://bluearchive.wikiru.jp/?2%E7%AB%A0/H2-' + str(page)
+    url = 'https://bluearchive.wikiru.jp/?14%E7%AB%A0/H14-' + str(page)
 
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
