@@ -1,4 +1,5 @@
 from flask import Flask
+from gevent import pywsgi
 from threading import Thread
 
 app = Flask('')
@@ -8,8 +9,10 @@ def main():
 	return 'Bot is aLive!'
 
 def run():
-    app.run(host="0.0.0.0", port=8080)
+  server = pywsgi.WSGIServer(('0.0.0.0', 5000), app)
+  server.serve_forever()
+
 
 def keep_alive():
-    server = Thread(target=run)
-    server.start()
+  server = Thread(target=run)
+  server.start()

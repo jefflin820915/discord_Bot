@@ -97,7 +97,10 @@ class BlueArchiveNormal:
 
             response = requests.get(url)
             soup = BeautifulSoup(response.text, "html.parser")
-            table = soup.find('div', {'id': 'rgn_content2'})
+            if Ch < 17:
+              table = soup.find('div', {'id': 'rgn_content2'})
+            else:
+              table = soup.find('div', {'id': 'rgn_content1'})
             columns = [th.text.replace('\n', '') for th in table.find('thead').find_all('th')]
             trs = table.find_all('tr')[1:]
             rows = list()

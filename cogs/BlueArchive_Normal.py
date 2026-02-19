@@ -478,7 +478,7 @@ class BlueArchive_Normal(Cog_Extension):
     @commands.command()
     async def BA_N18_5(self, ctx):
         await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalPic(self, 5, 6, BA_CH18))
-        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, BA_CH1))
+        await ctx.send(blueArchiveJPWiki_Nornal.BlueArchiveNormal.getNormalTable(self, 5, 6, BA_CH18))
 
 # --------------------------           -------------------------------------------------------#
     @commands.command()
