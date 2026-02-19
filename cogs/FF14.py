@@ -2,7 +2,7 @@ from discord.ext import commands, tasks
 import discord
 import aiohttp
 import json
-import async_timeout
+import datetime
 from core.classes import Cog_Extension
 
 with open('./common/setting.json', 'r', encoding='utf8') as jfile:
@@ -25,85 +25,110 @@ class FF14(Cog_Extension):
     async def ff14test(self, ctx):
         await ctx.send("FF14 模組運作中！正在嘗試手動觸發發送...")
 
-    async def get_real_coords(self, map_id, hunt_id):
-        """
-        根據地圖 ID 和怪物座標 ID 獲取實際的 (X, Y) 座標
-        """
-        # 檢查緩存中是否已有此地圖資料
+
+    async def get_real_coords(self, map_id, point_id, session):
+        """抓取地圖 API 獲取實際的 X, Y"""
+        if not map_id or not point_id:
+            return None, None
+
+        # 檢查快取
         if map_id not in self.map_cache:
             map_api_url = f"https://cdn.xivlantern.com/maps/marker/{map_id}.json"
             try:
-                async with self.session.get(map_api_url, timeout=5) as resp:
+                async with session.get(map_api_url, timeout=5) as resp:
                     if resp.status == 200:
                         self.map_cache[map_id] = await resp.json()
                     else:
                         return None, None
             except Exception as e:
-                print(f"DEBUG: 獲取地圖 {map_id} 失敗: {e}")
+                print(f"DEBUG: 抓取地圖 {map_id} 失敗: {e}")
                 return None, None
 
-        # 從地圖資料中尋找匹配的 hunt_spawn_points
         map_data = self.map_cache.get(map_id)
-        if map_data:
-            for point in map_data.get("hunt_spawn_points", []):
-                # 轉成字串比對較保險
-                if str(point.get("id")) == str(hunt_id):
-                    return point.get("x"), point.get("y")
+        if not map_data:
+            return None, None
+
+        # 合併搜尋 hunt_spawn_points 和 fate_spawn_points
+        all_points = map_data.get("hunt_spawn_points", []) + map_data.get("fate_spawn_points", [])
+
+        for point in all_points:
+            # 必須轉成字串比對，因為 JSON ID 有時是數字有時是字串
+            if str(point.get("id")) == str(point_id):
+                return point.get("x"), point.get("y")
 
         return None, None
 
-    @tasks.loop(seconds=60)
+    @tasks.loop(seconds=60.0)
     async def auto_post_task(self):
         await self.bot.wait_until_ready()
-
-        if self.session is None or self.session.closed:
-            self.session = aiohttp.ClientSession()
-
-        # 每輪開始前清空地圖緩存，確保資料最新
-        self.map_cache = {}
-
-        print("DEBUG: 正在嘗試抓取 FF14 API...")
-
+        channel = self.bot.get_channel(self.target_channel_id)
+        if not channel:
+            return
+            
         try:
-            async with async_timeout.timeout(10):
-                async with self.session.get(self.api_url) as response:
-                    if response.status == 200:
-                        data = await response.json()
-                        items = data.get("items", [])
-                        print(f"DEBUG: 抓取成功，共有 {len(items)} 筆資料")
-                    else:
-                        print(f"DEBUG: API 報錯，狀態碼: {response.status}")
+            # 使用同一個 session 處理所有請求
+            async with aiohttp.ClientSession() as session:
+                async with session.get(self.api_url, timeout=10) as response:
+                    if response.status != 200:
                         return
-
-            if channel and items:
+                    data = await response.json()
+        
+                items = data.get("items", [])
+                current_active_keys = set()
+                self.map_cache = {} # 每輪重新整理地圖資訊
+        
                 for item in items:
-                    # 只有當 'live' 欄位存在時才處理（代表怪物當前存在）
+                    item_key = item.get("key")
                     live_info = item.get("live")
-                    if live_info:
-                        map_id = item.get("map_id")
-                        hunt_id = live_info.get("hunt_id")
-
-                        # 呼叫獲取 X, Y 座標
-                        x, y = await self.get_real_coords(map_id, hunt_id)
-                        pos_text = f"(X: {x}, Y: {y})" if x and y else "座標未知"
-
-                        # 建立 Embed 訊息
-                        embed = discord.Embed(
-                            title=f"【狩獵情報】{item.get('name')}",
-                            description=f"地圖：{item.get('map_name')}\n座標：{pos_text}",
-                            color=discord.Color.red()
-                        )
-
-                        # 可以在這裡加入原本的判斷邏輯 (例如：if True:)
-                        await channel.send(embed=embed)
-
-                print("DEBUG: 邏輯執行完畢")
-
+        
+                    if live_info is not None:
+                        current_active_keys.add(item_key)
+        
+                        if item_key not in self.notified_keys:
+                            world = item.get("world_name", "未知伺服器")
+                            print
+                            instance = item.get("instance", 0)
+                            meta = item.get("meta", {})
+                            print(f"DEBUG: meta 資料 - {meta}")
+                            name = meta.get("name", "未知目標")
+                            print(f"DEBUG: 目標名稱 - {name}")
+        
+                            # 安全抓取 map_id 和 map_name
+                            item_maps = meta.get("itemmaps", [])
+                            map_id = item_maps[0].get("map_id") if item_maps else None
+                            map_name = item_maps[0].get("map_name", "未知地圖") if item_maps else "未知地圖"
+        
+                            # 獲取點位 ID (優先抓 hunt_id，沒有就抓 fate_id)
+                            point_id = live_info.get("hunt_id") or live_info.get("fate_id")
+        
+                            # 呼叫 get_real_coords 獲取 X, Y
+                            real_x, real_y = await self.get_real_coords(map_id, point_id, session)
+        
+                            # 如果 API 沒給座標，就用我們查到的座標
+                            pos_x = live_info.get("x") or real_x or "?"
+                            pos_y = live_info.get("y") or real_y or "?"
+        
+                            title_suffix = f" (分線 {instance})" if instance > 0 else ""
+        
+                            embed = discord.Embed(
+                                title=f"🏹 發現大型 FATE / S 級怪！{title_suffix}",
+                                color=discord.Color.red(),
+                                description=f"**{name}** 正在出現中！",
+                                timestamp=datetime.datetime.now(datetime.timezone.utc)
+                            )
+                            embed.add_field(name="伺服器", value=world, inline=True)
+                            embed.add_field(name="地圖位置", value=f"{map_name} ( {pos_x} , {pos_y} )", inline=True)
+        
+                            item_type = item.get("type", "fate")
+                            embed.set_footer(text=f"來源: XIVLantern | 類型: {item_type.upper()}")
+        
+                            await channel.send(embed=embed)
+                            self.notified_keys.add(item_key)
+        
+                # 更新已通知名單，移除已經消失的怪
+                self.notified_keys = {k for k in self.notified_keys if k in current_active_keys}
         except Exception as e:
-            print(f"DEBUG: 執行時發生錯誤: {e}")
-            if self.session:
-                await self.session.close()
-
+            print(f"XIVLantern Task Error: {e}")
 
 async def setup(bot):
-    await bot.add_cog(FF14(bot))
+  await bot.add_cog(FF14(bot))
