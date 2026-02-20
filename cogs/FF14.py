@@ -14,7 +14,7 @@ class FF14(Cog_Extension):
     def __init__(self, bot):
         super().__init__(bot)
         # --- 請確保這裡是純數字 (int) ---
-        self.target_channel_id = int(jdata['channel_one_id'])
+        self.target_channel_id = int(jdata['channel_fate_id'])
         self.api_url = "https://cdn.xivlantern.com/feed/dashboard.json"
         self.notified_keys = set()
         self.session = None
@@ -61,7 +61,7 @@ class FF14(Cog_Extension):
 
         return None, None
 
-    @tasks.loop(seconds=10)
+    @tasks.loop(minutes=1)
     async def auto_post_task(self):
         await self.bot.wait_until_ready()
         channel = self.bot.get_channel(self.target_channel_id)
