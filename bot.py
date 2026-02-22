@@ -29,7 +29,7 @@ async def main():
     async with bot:
         await load()
         keep_alive.keep_alive()
-        await bot.start(jdata['TOKEN'])
+        await bot.start("MjI3MzY1ODU0NjUwNjk1Njgx.GWWXoo.8gYGr8cmaZLuxHEaAdPQEmEWyUFJ_oTR6wdppE")
         print('login')
 
 asyncio.run(main())
