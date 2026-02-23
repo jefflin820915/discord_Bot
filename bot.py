@@ -29,7 +29,11 @@ async def main():
     async with bot:
         await load()
         keep_alive.keep_alive()
-        await bot.start("MjI3MzY1ODU0NjUwNjk1Njgx.GWWXoo.8gYGr8cmaZLuxHEaAdPQEmEWyUFJ_oTR6wdppE")
+        token = os.getenv('TOKEN')
+        if token is None:
+            print("錯誤: 找不到環境變數 TOKEN")
+            return
+        await bot.start(token)
         print('login')
 
 asyncio.run(main())
