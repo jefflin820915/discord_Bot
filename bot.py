@@ -5,7 +5,6 @@ import asyncio
 import keep_alive
 from discord.ext import commands
 
-
 with open("./common/setting.json", "r", encoding="utf8") as jfile:
     jdata = json.load(jfile)
 
@@ -20,16 +19,19 @@ bot = commands.Bot(command_prefix='$', intents=discord.Intents.all())
 async def on_ready():
     print("Bot in ready")
 
+
 async def load():
     for file in COGS:
         if file.endswith(".py"):
             await bot.load_extension(f"cogs.{file[:-3]}")
 
+
 async def main():
     async with bot:
         await load()
         keep_alive.keep_alive()
-        await bot.start("MjI3MzY1ODU0NjUwNjk1Njgx.GWWXoo.8gYGr8cmaZLuxHEaAdPQEmEWyUFJ_oTR6wdppE")
+        await bot.start(jdata['TOKEN'])
         print('login')
+
 
 asyncio.run(main())
